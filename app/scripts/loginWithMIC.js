@@ -1,5 +1,6 @@
-Kinvey.User.MIC.loginWithAuthorizationCodeLoginPage('http://localhost:9000').then(function(user) {
-  // Do something after the user has logged in.
+var redirectUri = 'http://localhost:3000';
+Kinvey.User.MIC.loginWithAuthorizationCodeLoginPage(redirectUri).then(function(user) {
+  // The user is logged in.
 }).catch(function(err) {
-  // An error occurred while trying to loggin with MIC.
+  // An error occurred while trying to login with MIC.
 });

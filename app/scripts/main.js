@@ -2,6 +2,10 @@
 
 'use strict';
 
+var appKey = window.APP_KEY;
+var appSecret = window.APP_SECRET;
+var redirectUri = window.REDIRECT_URI;
+
 var app = window.app = {
   init: function(options) {
     return Kinvey.init(options).then(function(user) {
@@ -19,7 +23,7 @@ var app = window.app = {
   },
 
   login: function() {
-    return Kinvey.User.MIC.loginWithAuthorizationCodeLoginPage('http://localhost:9000').then(function(user) {
+    return Kinvey.User.MIC.loginWithAuthorizationCodeLoginPage(redirectUri).then(function(user) {
       $('#login').fadeOut(250, function() {
         $('#logout').fadeIn(250);
       });
@@ -39,6 +43,9 @@ var app = window.app = {
 
 // Initialize the app
 app.init({
-  appKey: 'kid_-Jk_I5qJC',
-  appSecret: 'a05d17fd04634d8e8157f397d4c0fd2a'
+  appKey: appKey,
+  appSecret: appSecret
+}).catch(function(err) {
+  $('#initialize').html('<b>An error has occurred:</b> ' + err).addClass('text-closed');
+  $('#initialize').append('<p>Please make sure you followed all the instructions in the README to setup the project. The README can be found at the root of the project.');
 });

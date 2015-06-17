@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MIC</title>
+    <title>Kinvey HTML5 MIC FLOW</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -34,7 +34,7 @@
       <div>
         <h2 class="text-orange">Kinvey Mobile Identity Connect (MIC)</h2>
         <p class="lead">
-          Mobile Identity Connect (MIC) is a service that bridges mobile applications with existing enterprise identity and single sign-on solutions. MIC enables mobile applications to integrate with a variety of identity solutions using a single OAuth2-based interface. This allows enterprise application developers to avoid the complexity of integrating these protocols into mobile, while providing enterprise IT the means to ensure that access to resources is secured only to authenticated users, as well as maintaining full control over a mobile user's identity. This example application uses the Kinvey HTML5 JavaScript library to demonstrate logging in to <a href="https://www.pingidentity.com" target="_blank">Ping Identity</a> using MIC.
+          Mobile Identity Connect (MIC) is a service that bridges mobile applications with existing enterprise identity and single sign-on solutions. MIC enables mobile applications to integrate with a variety of identity solutions using a single OAuth2-based interface. This allows enterprise application developers to avoid the complexity of integrating these protocols into mobile, while providing enterprise IT the means to ensure that access to resources is secured only to authenticated users, as well as maintaining full control over a mobile user's identity. Take a look at our <a href="http://devcenter.kinvey.com/html5/guides/mobile-identity-connect#authenticating">MIC Guide</a> for more information.
         </p>
 
         <p id="initialize">
@@ -43,18 +43,9 @@
 
         <div id="login" style="display: none;">
           <p class="lead">
-            Click on the login button below and enter the provided credentials to login. Example code provided below is how to login a user with MIC.
-          </p>
+            Click on the login button below and enter the provided credentials to login. An example code snippet is shown on how to login with MIC.
           </p>
           <pre data-src="scripts/loginWithMIC.js" class="language-javascript"></pre>
-          <p>
-            <div>
-              <b>Username:</b> ivan
-            </div>
-            <div>
-              <b>Password:</b> Zse45rfv
-            </div>
-          </p>
           <p>
             <button class="btn" type="button" onclick="app.login();">Login</button>
           </p>
@@ -62,7 +53,10 @@
 
         <div id="logout" style="display: none;">
           <p class="lead">
-            <b>A user is already logged in.</b> Click the logout button below to logout the user. Example code provided below is how to logout a user who is logged in with MIC.
+            <b>A user is logged in.</b>
+          </p>
+          <p class="lead">
+            Click the logout button below to logout the user. An example code snippet is shown on how to logout a user who logged in with MIC.
           </p>
           <pre data-src="scripts/logout.js" class="language-javascript"></pre>
           <p>
@@ -86,6 +80,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/app.js -->
+    <script src="/scripts/config.js"></script>
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
   </body>
