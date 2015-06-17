@@ -5,6 +5,7 @@
   "devDependencies": {
     "babel": "^5.5.6",
     "browser-sync": "^2.2.1",
+    "chalk": "^1.0.0",
     "del": "^1.1.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
@@ -23,6 +24,7 @@
     "gulp-useref": "^1.1.1",
     "main-bower-files": "^2.5.0",
     "opn": "^1.0.1",
+    "prompt": "^0.2.14",
     "wiredep": "^2.2.2"
   },
   "eslintConfig": {
@@ -36,5 +38,12 @@
         "single"
       ]
     }
+  },
+  "scripts": {
+    "install": "./node_modules/.bin/bower install",
+    "start": "./node_modules/.bin/gulp serve"
+  },
+  "dependencies": {
+    "bower": "^1.4.1"
   }
 }
