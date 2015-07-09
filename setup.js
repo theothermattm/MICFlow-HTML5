@@ -9,7 +9,7 @@ var path = require('path');
 var configFile = path.join(__dirname, 'app/scripts/config.js');
 
 console.log(chalk.cyan('This utility will walk you through setting up MIC Flow for HTML5.'));
-console.log(chalk.cyan('Please refer to http://devcenter.kinvey.com/android/guides/mobile-identity-connect on how to setup MIC.'))
+console.log(chalk.cyan('Please refer to http://devcenter.kinvey.com/html5/guides/mobile-identity-connect on how to setup MIC.'))
 console.log(chalk.cyan('Press ^C at any time to quite.'));
 console.log('');
 
@@ -24,13 +24,24 @@ prompt.start();
 prompt.get({
   properties: {
     appKey: {
-      description: chalk.white('What is your app key?')
+      description: chalk.white('What is your app key?'),
+      required: true
     },
     appSecret: {
-      description: chalk.white('What is your app secret?')
+      description: chalk.white('What is your app secret?'),
+      required: true
+    },
+    apiHostname: {
+      description: chalk.white('What is the API hostname?'),
+      default: 'https://baas.kinvey.com'
+    },
+    micHostname: {
+      description: chalk.white('What is the MIC hostnam?'),
+      default: 'https://auth.kinvey.com'
     },
     redirectUri: {
-      description: chalk.white('What is your redirect uri?')
+      description: chalk.white('What is your redirect uri?'),
+      required: true
     }
   }
 }, function(err, result) {
@@ -43,6 +54,8 @@ prompt.get({
     '\n' +
     'window.APP_KEY = \'' + result.appKey + '\';\n' +
     'window.APP_SECRET = \'' + result.appSecret + '\';\n' +
+    'window.API_HOSTNAME = \'' + result.apiHostname + '\';\n' +
+    'window.MIC_HOSTNAME = \'' + result.micHostname + '\';\n' +
     'window.REDIRECT_URI = \'' + result.redirectUri + '\';';
 
   console.log();
