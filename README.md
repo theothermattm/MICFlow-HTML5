@@ -10,7 +10,7 @@ Mobile Identity Connect is a service that bridges mobile applications with exist
 2.  Click the __Auth Source__ tab at the top of the page
 3.  Set the `Type of Provider` to be `Custom`
 4.  In the `Provider URL`, enter: `https://authlinkdemo.herokuapp.com/authenticate`
-5.  In the `Redirect URI's: ` enter: `kinveyAuthDemo://`
+5.  In the `Redirect URI's: ` enter: `http://localhost:3000`
 
 The above Auth Provider sample can be used with the username: `test` and the password: `test`.
 
