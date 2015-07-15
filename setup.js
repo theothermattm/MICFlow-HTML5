@@ -36,7 +36,7 @@ prompt.get({
       default: 'https://baas.kinvey.com'
     },
     micHostname: {
-      description: chalk.white('What is the MIC hostnam?'),
+      description: chalk.white('What is the MIC hostname?'),
       default: 'https://auth.kinvey.com'
     },
     redirectUri: {
