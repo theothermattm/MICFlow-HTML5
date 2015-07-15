@@ -4,17 +4,17 @@ This application showcases using the Mobile Identity Connect (MIC) authorization
 
 Mobile Identity Connect is a service that bridges mobile applications with existing enterprise identity and single sign-on solutions. MIC enables mobile applications to integrate with a variety of identity solutions using a single OAuth2-based interface. This allows enterprise application developers to avoid the complexity of integrating these protocols into mobile, while providing enterprise IT the means to ensure that access to resources is secured only to authenticated users, as well as maintaining full control over a mobile user's identity.
 
-##Configure Console
+## Configure Console
 
 1.  Visit the __User__ Section of the [console](https://console.kinvey.com).
 2.  Click the __Auth Source__ tab at the top of the page
 3.  Set the `Type of Provider` to be `Custom`
 4.  In the `Provider URL`, enter: `https://authlinkdemo.herokuapp.com/authenticate`
-5.  In the `Redirect URI's: ` enter: `http://localhost:3000`
+5.  In the `Redirect URI's: ` enter: `http://localhost:9000`
 
 The above Auth Provider sample can be used with the username: `test` and the password: `test`.
 
-##Install
+## Setup
 
 **Note:** Make sure you have installed NodeJS. Please visit https://nodejs.org/ for instructions on how to install.
 
