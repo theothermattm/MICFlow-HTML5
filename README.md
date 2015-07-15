@@ -11,6 +11,7 @@ Mobile Identity Connect is a service that bridges mobile applications with exist
 3.  Set the `Type of Provider` to be `Custom`
 4.  In the `Provider URL`, enter: `https://authlinkdemo.herokuapp.com/authenticate`
 5.  In the `Redirect URI's: ` enter: `http://localhost:9000`
+6. Add the following to allowed attributes: id, audience, client_token.
 
 The above Auth Provider sample can be used with the username: `test` and the password: `test`.
 

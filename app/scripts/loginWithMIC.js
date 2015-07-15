@@ -1,4 +1,4 @@
-var redirectUri = 'http://localhost:3000';
+var redirectUri = 'http://localhost:9000';
 Kinvey.User.MIC.loginWithAuthorizationCodeLoginPage(redirectUri).then(function(user) {
   // The user is logged in.
 }).catch(function(err) {
