@@ -1,9 +1,17 @@
 // $icon-font-path: '../fonts/';
 
-// bower:scss
-@import "bower_components/primer-css/scss/primer.scss";
-@import "bower_components/primer-markdown/components/markdown.scss";
-// endbower
+@import "bower_components/octicons/octicons/sprockets-octicons.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss";
+@import "bower_components/primer-css/scss/_variables.scss";
+@import "bower_components/primer-css/scss/_mixins.scss";
+@import "bower_components/primer-css/scss/_normalize.scss";
+@import "bower_components/primer-css/scss/_base.scss";
+@import "bower_components/primer-css/scss/_type.scss";
+@import "bower_components/primer-css/scss/_buttons.scss";
 
 .browserupgrade {
   margin: 0.2em 0;

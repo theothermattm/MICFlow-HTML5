@@ -9,7 +9,7 @@ var path = require('path');
 var configFile = path.join(__dirname, 'app/scripts/config.js');
 
 console.log(chalk.cyan('This utility will walk you through setting up MIC Flow for HTML5.'));
-console.log(chalk.cyan('Please refer to http://devcenter.kinvey.com/html5/guides/mobile-identity-connect on how to setup MIC.'))
+console.log(chalk.cyan('Please refer to http://devcenter.kinvey.com/html5/guides/mobile-identity-connect on how to setup MIC. Defaults are shown next to the question.'))
 console.log(chalk.cyan('Press ^C at any time to quite.'));
 console.log('');
 
@@ -41,6 +41,7 @@ prompt.get({
     },
     redirectUri: {
       description: chalk.white('What is your redirect uri?'),
+      default: 'https://localhost:9000/callback',
       required: true
     }
   }
@@ -86,7 +87,7 @@ prompt.get({
           return;
         }
 
-        console.log(chalk.white('Done.'));
+        console.log(chalk.white('Done. Start the application by running `npm start`.'));
       });
     }
     else {
