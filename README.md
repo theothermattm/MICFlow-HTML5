@@ -10,7 +10,7 @@ Mobile Identity Connect is a service that bridges mobile applications with exist
 2.  Click the __Auth Source__ tab at the top of the page
 3.  Set the `Type of Provider` to be `Custom`
 4.  In the `Provider URL`, enter `https://authlinkdemo.herokuapp.com/authenticate`
-5.  In the `Redirect URI's: ` enter `http://localhost:9000`
+5.  In the `Redirect URI's: ` enter `http://localhost:9000/callback`
 6.  In the `Allowed Attributes`: add `id`, `audience`, `client_token`.
 
 The above Auth Provider sample can be used with the username: `test` and the password: `test`.
@@ -21,10 +21,11 @@ The above Auth Provider sample can be used with the username: `test` and the pas
 
 1. Clone the Repo, or download the zip file and extract it.
 2. Run `npm install` to install dependencies.
-3. Run `node setup.js` to setup the project.
+3. Run `node ./setup` to setup the project.
 
 ## Run
-1. Run `npm start` to view the example.
+
+1. Run `npm start` to view the app.
 2. Enjoy!
 
 Take a look at our [MIC Guide](http://devcenter.kinvey.com/html5/guides/mobile-identity-connect#authenticating) for more information.
