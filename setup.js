@@ -41,7 +41,7 @@ prompt.get({
     },
     redirectUri: {
       description: chalk.white('What is your redirect uri?'),
-      default: 'https://localhost:9000/callback',
+      default: 'http://localhost:9000/callback',
       required: true
     }
   }
